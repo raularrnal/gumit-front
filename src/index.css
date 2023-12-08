@@ -1,0 +1,103 @@
+/* src/index.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #3498db; /* Color azul corporativo */
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.category-list li {
+  margin: 10px;
+  padding: 15px 25px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  border-radius: 5px;
+}
+
+.category-list li:hover {
+  background-color: #2980b9; /* Cambio de color al pasar el ratón */
+  transform: scale(1.05);
+}
+
+.category-list li.selected {
+  background-color: #1f6780; /* Cambio de color al seleccionar */
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product-item {
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #3498db; /* Color azul corporativo */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* src/index.css */
+
+/* ... Estilos anteriores ... */
+
+h2 {
+  color: #3498db; /* Color azul corporativo */
+  background-color: #d6f0f1; /* Color de fondo gris claro */
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* src/index.css */
+
+h2 i {
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
