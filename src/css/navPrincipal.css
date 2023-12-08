@@ -1,0 +1,70 @@
+/* App.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  nav {
+    background-color: #046bc0;
+    color: white;
+    padding: 10px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  .admin-menu-item-first {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .admin-menu-item-first:hover {
+    color: #4c82af;
+  }
+  
+  
+.admin-menu-container-first {
+    background-color: #046bc0;  
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  li {
+    margin-right: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #00f9f4;
+  }
+  
+  .content-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  

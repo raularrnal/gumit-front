@@ -1,0 +1,10 @@
+/* ErrorStyles.css */
+
+.error-message {
+    color: #ff5b5b; /* Color rojo para resaltar el error */
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: bold;
+    text-align: center;
+  }
+  

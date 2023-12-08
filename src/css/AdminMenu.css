@@ -1,0 +1,23 @@
+/* AdminMenu.css */
+
+.admin-menu-container {
+    background-color: #0a88ef;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .admin-menu-item {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .admin-menu-item:hover {
+    color: #4c82af;
+  }
+  
