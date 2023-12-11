@@ -1,0 +1,35 @@
+.div-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  /* Estilos para cada div individual */
+  .div-item {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+  
+    /* Agregar estilos específicos como colores, fuentes, etc. */
+  }
+  
+  .div-item:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+  }
+
+  .banner {
+    text-align: center;
+    background-color: #3a03f1;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .banner h1 {
+    font-size: 2em;
+  }

@@ -12,28 +12,48 @@ body {
   padding: 20px;
 }
 
+
 .category-list {
+
+  background-color: #3498db; /* Color azul corporativo */
   list-style: none;
   padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: center;
-  background-color: #3498db; /* Color azul corporativo */
-  border-radius: 8px;
-  margin-bottom: 20px;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no hay suficiente espacio */
+
+
 }
 
 .category-list li {
-  margin: 10px;
-  padding: 15px 25px;
   color: white;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  border-radius: 5px;
+  flex: 1; /* Hace que cada elemento de la lista ocupe un espacio igual */
+  text-align: center; /* Centra el texto dentro de cada elemento de la lista */
+  padding: 10px; /* Añade relleno para espaciado interno */
+  box-sizing: border-box; /* Incluye el relleno en el ancho y alto del elemento */
+  min-width: 120px; /* Establece el ancho mín */
+
+}
+
+.whatsapp {
+
+  width: 20px; /* Ajusta el tamaño según tus preferencias */
+  height: auto; /* Esto mantiene la proporción original de la imagen */
+  margin-right: 10px; /* Otra opción para ajustar el espaciado entre la imagen y el texto */
+
+}
+
+
+.allergens-pic {
+
+  width: 40px; /* Ajusta el tamaño según tus preferencias */
+  height: auto; /* Esto mantiene la proporción original de la imagen */
+  margin-right: 10px; /* Otra opción para ajustar el espaciado entre la imagen y el texto */
+
 }
 
 .category-list li:hover {
   background-color: #2980b9; /* Cambio de color al pasar el ratón */
-  transform: scale(1.05);
 }
 
 .category-list li.selected {
@@ -42,10 +62,17 @@ body {
 
 .product-list {
   list-style: none;
-  padding: 0;
+  padding: 0; 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+.list-flex {
+  display: flex;
+  flex-wrap: wrap;  /* Permite que los elementos se desplacen automáticamente a la siguiente línea */
+  justify-content: space-around;  /* Ajusta el espacio entre los elementos */
+  list-style: none;
+  padding: 0;
 }
 
 .product-item {
@@ -58,6 +85,7 @@ body {
   text-align: center;
   transition: transform 0.3s;
   cursor: pointer;
+  
 }
 
 .product-item:hover {
@@ -101,3 +129,39 @@ h2 i {
   font-size: 1.5em;
 }
 
+
+.banner {
+  background-color: rgb(40, 40, 228);
+
+  text-align: center;
+  color: white;
+  padding: 50px 20px;
+}
+
+.banner h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 1.2em;
+}
+
+.custom-card {
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+}
+
+
+.carta-button {
+  cursor: pointer;
+  padding: 8px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
