@@ -15,12 +15,15 @@ body {
 
 .category-list {
 
-  background-color: #3498db; /* Color azul corporativo */
+  background-color:  #d4aa8a;
+
+  
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no hay suficiente espacio */
+  justify-content: space-around; /* Alinea uniformemente los elementos a lo largo de la fila */
 
 
 }
@@ -32,32 +35,33 @@ body {
   padding: 10px; /* Añade relleno para espaciado interno */
   box-sizing: border-box; /* Incluye el relleno en el ancho y alto del elemento */
   min-width: 120px; /* Establece el ancho mín */
+  margin: 5px; /* Puedes ajustar este valor según tus necesidades */
 
 }
 
 .whatsapp {
-
-  width: 20px; /* Ajusta el tamaño según tus preferencias */
-  height: auto; /* Esto mantiene la proporción original de la imagen */
-  margin-right: 10px; /* Otra opción para ajustar el espaciado entre la imagen y el texto */
-
+  width: auto;
+  height: 50px;
+  margin-right: 10px;
+  padding: 10px;
 }
+
 
 
 .allergens-pic {
 
-  width: 40px; /* Ajusta el tamaño según tus preferencias */
+  width: 50px; /* Ajusta el tamaño según tus preferencias */
   height: auto; /* Esto mantiene la proporción original de la imagen */
   margin-right: 10px; /* Otra opción para ajustar el espaciado entre la imagen y el texto */
 
 }
 
 .category-list li:hover {
-  background-color: #2980b9; /* Cambio de color al pasar el ratón */
+  background-color: #e2c0a6; /* Cambio de color al pasar el ratón */
 }
 
 .category-list li.selected {
-  background-color: #1f6780; /* Cambio de color al seleccionar */
+  background-color: #e2c0a6;/* Cambio de color al seleccionar */
 }
 
 .product-list {
@@ -89,7 +93,8 @@ body {
 }
 
 .product-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
+  background-color: #e2c0a6;
 }
 
 .product-info {
@@ -101,7 +106,7 @@ body {
 .price-circle {
   width: 60px;
   height: 60px;
-  background-color: #3498db; /* Color azul corporativo */
+  background-color: #d4aa8a; /* Color azul corporativo */
   color: white;
   border-radius: 50%;
   display: flex;
@@ -115,8 +120,7 @@ body {
 /* ... Estilos anteriores ... */
 
 h2 {
-  color: #3498db; /* Color azul corporativo */
-  background-color: #d6f0f1; /* Color de fondo gris claro */
+  background-color: #d4aa8a; /* Color de fondo gris claro */
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 20px;
@@ -164,4 +168,25 @@ h2 i {
   border: none;
   border-radius: 5px;
   font-size: 14px;
+}
+
+/* Estilos para el título debajo del banner */
+.banner-title {
+  text-align: center;
+  color : #f8f7f7;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+
+}
+
+/* Estilos para la línea cuadrada alrededor del título */
+.title-container {
+  text-align: center;
+  background-color: #d4aa8a;
+
+}
+
+.rss-container {
+  width: 100%;
+  background-color: #d4aa8a;
+
 }

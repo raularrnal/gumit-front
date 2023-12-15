@@ -4,7 +4,10 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ProductList from './ProductList';
 import { useParams } from 'react-router-dom';
-import whatsapp from '../img/whatsapp_logo.svg'
+import whatsapp from '../img/icons8-whatsapp-50.png'
+import instagram from '../img/icons8-instagram-50.png'
+import AdminMenu from './AdminMenuPrincipal';
+
 
 
 const CategoryList = () => {
@@ -46,13 +49,26 @@ const CategoryList = () => {
   const handleCategoryClick = (categoryId) => {
     setSelectedCategoryId(categoryId);
   };
-
+ /**
+  *     {restaurant != null  && <div className='rss-container'> 
+     { restaurant.phone && restaurant.phone !== null && <a href={`https://wa.me/${restaurant.phone}`} target="_blank">
+   <img src={whatsapp == null  ? whatsapp: whatsapp} className="whatsapp" alt='whatsapp' /> </a> }
+   
+   {restaurant.instagram &&   restaurant.instagram !== null && (
+      <a href={`https://www.instagram.com/${restaurant.instagram}`} target="_blank">
+        <img src={instagram} alt="Instagram"  className="whatsapp"  />
+      </a>
+    )}
+</div>} 
+  */
   return (
     <div>
-      <h3>{restaurant == null ? null : restaurant.name}</h3>
-      <h5>      <img src={whatsapp == null  ? whatsapp: whatsapp} className="whatsapp" alt='whatsapp' />
- {restaurant == null ? null : restaurant.phone}</h5>
 
+      <div class="title-container">
+        <h3 class="banner-title">{restaurant == null ? null : restaurant.name}</h3>
+    </div>
+
+     
       <ul className="category-list">
         {categoryList.map(category => (
           <li

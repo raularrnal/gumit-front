@@ -36,7 +36,7 @@ body {
   
   
 .admin-menu-container-first {
-    background-color: #046bc0;  
+    background-color: #d4aa8a;  
     color: white;
     padding: 10px;
     display: flex;
@@ -58,9 +58,36 @@ body {
   a:hover {
     color: #00f9f4;
   }
-  
+  .card-img-top-custom{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+  }
+/* Estilos específicos para pantallas más grandes (por ejemplo, dispositivos de escritorio) */
+@media only screen and (min-width: 768px) {
+  .card-img-top-custom {
+      max-width: 50%; /* Puedes ajustar este valor según tus necesidades */
+      margin: 0 auto; /* Centra la imagen horizontalmente */
+
+    }
+}
+
+/* Estilos específicos para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media only screen and (max-width: 767px) {
+  .card-img-top-custom {
+      max-width: 100%; /* Puedes ajustar este valor según tus necesidades */
+  }
+}
+
+  .banner-container {
+    position: relative;
+    text-align: center;
+  }
+
   .content-container {
-    max-width: 800px;
+    max-width: auto;
     margin: auto;
     padding: 20px;
     background-color: white;

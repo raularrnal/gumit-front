@@ -1,7 +1,6 @@
 // Popup.js
 import React from 'react';
 import '../css/Popup.css'; // Asegúrate de tener estilos CSS adecuados
-import gluten from '../img/alergenos/gluten.png'
 
 const Popup = ({ src, description, price, allergenList,onClose }) => {
 
@@ -9,7 +8,7 @@ const Popup = ({ src, description, price, allergenList,onClose }) => {
   return (
     <div className="popup-overlay" onClick={onClose}>
       <div className="popup-content" onClick={(e) => e.stopPropagation()}>
-        <img src={src} alt={`Imagen de ${description}`} />
+        <img className='product-pic' src={src} alt={`Imagen de ${description}`} />
         <p>{description}</p>
         <p>{price} €</p>
         <ul className='flex-list'>

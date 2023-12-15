@@ -18,9 +18,11 @@ const App = () => {
 
     <Router>
       <div className="content-container">
+
       <Link to="/" style={{ textDecoration: 'none' }}>
-      <img src={gumit == null  ? gumit: gumit} className="card-img-top" alt='GUMIT BANNER' />
-</Link>        <Routes>
+      <img src={gumit == null  ? gumit: gumit} className="card-img-top-custom" alt='GUMIT BANNER' />
+</Link>       
+ <Routes>
           <Route path="/carta/:id" element={< CategoryList />} />
           <Route path="/admin/*" element={<Admin />} />
           <Route path="/" element={<Restaurants />} />

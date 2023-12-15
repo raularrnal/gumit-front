@@ -9,7 +9,6 @@ const AdminMenu = () => {
     <div className="admin-menu-container">
       <Link to="/admin/categories" className="admin-menu-item">Categorías</Link>
       <Link to="/admin/products" className="admin-menu-item">Productos</Link>
-      {/* Agrega más enlaces según sea necesario */}
     </div>
   );
 };

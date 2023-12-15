@@ -4,14 +4,36 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/AdminMenu.css'; // Importa el archivo CSS
 
-const AdminMenu = () => {
+const AdminMenuPrincipal = () => {
+  const [opcionSeleccionada, setOpcionSeleccionada] = useState('carta');
+
+  const mostrarContenido = () => {
+    switch (opcionSeleccionada) {
+      case 'carta':
+        return <CategoriaMenu />;
+      case 'menu':
+        return <MenuCarta />;
+      case 'informacion':
+        return <InformacionRestaurante />;
+      default:
+        return null;
+    }
+  };
+
   return (
-    <div className="admin-menu-container">
-      <Link to="/admin/categories" className="admin-menu-item">Categorías</Link>
-      <Link to="/admin/products" className="admin-menu-item">Productos</Link>
-      {/* Agrega más enlaces según sea necesario */}
+    <div>
+      {/* Menú de opciones */}
+      <div>
+        <button onClick={() => setOpcionSeleccionada('carta')}>Carta</button>
+        <button onClick={() => setOpcionSeleccionada('menu')}>Menú</button>
+        <button onClick={() => setOpcionSeleccionada('informacion')}>Información</button>
+      </div>
+
+      {/* Contenido dinámico según la opción seleccionada */}
+      {mostrarContenido()}
     </div>
   );
 };
 
-export default AdminMenu;
+
+export default AdminMenuPrincipal;

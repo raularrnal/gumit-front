@@ -36,8 +36,8 @@ const ProductList = ({ categoryId }) => {
     <div>
       <ul className='list-flex'>
         {productList.map(product => (
-          <li key={product.id} className="product-item">
-        <img src={product.image == null  ? logo: product.image} className="card-img-top" alt={`Imagen de ${product.name}`} onClick={() => showPopup(product)} />
+          <li key={product.id} className="product-item"  onClick={() => showPopup(product)}> 
+        <img src={product.image == null  ? logo: product.image} className="card-img-top" alt={`Imagen de ${product.name}`} />
 
             <div className="product-info">
               <p>{product.name}</p>
