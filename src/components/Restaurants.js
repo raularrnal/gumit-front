@@ -36,12 +36,12 @@ const Restaurants = () => {
       <ul className="list-flex">
         {restaurantList.map((restaurant) => (
          <Link to={`/carta/${restaurant.id}`} className="admin-menu-item-first">  <li key={restaurant.id} className="product-item">
-            <div className="card" style={{ marginBottom: '20px', transition: 'transform 0.3s ease-in-out' }}>
+            <div className="card" style={{  marginBottom: '20px', transition: 'transform 0.3s ease-in-out' }}>
              
-              <img src={restaurant.image == null  ? logo: restaurant.image} className="card-img-top" alt={`Imagen de ${restaurant.name}`} />
-              <div className="card-body">
-                <h5 className="card-title">{restaurant.name}</h5>
-                <p className="card-text">{restaurant.description}</p>
+              <img src={restaurant.image == null  ? logo: require(restaurant.image)} className="card-img-top" alt={`Imagen de ${restaurant.name}`} />
+              <div className="card-body-custom" style = {{background: '#d4aa8a' }}>
+                <h5 className="card-title" style = {{padding: '10px' , color : 'white'}}>{restaurant.name}</h5>
+                <p className="card-text" style = {{color : 'white'}}>{restaurant.description}</p>
 
               </div>
             </div>

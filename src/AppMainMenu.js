@@ -7,6 +7,7 @@ import Admin from './components/Admin';
 import './css/navPrincipal.css';
 import Restaurants from './components/Restaurants';
 import gumit from './img/gumit-banner.jpeg';
+import AdminMenuPrincipal from './components/AdminMenuPrincipal';
 
 
 const App = () => {
@@ -23,7 +24,7 @@ const App = () => {
       <img src={gumit == null  ? gumit: gumit} className="card-img-top-custom" alt='GUMIT BANNER' />
 </Link>       
  <Routes>
-          <Route path="/carta/:id" element={< CategoryList />} />
+          <Route path="/carta/:id" element={< AdminMenuPrincipal />} />
           <Route path="/admin/*" element={<Admin />} />
           <Route path="/" element={<Restaurants />} />
     

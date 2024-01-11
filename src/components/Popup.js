@@ -4,7 +4,6 @@ import '../css/Popup.css'; // Asegúrate de tener estilos CSS adecuados
 
 const Popup = ({ src, description, price, allergenList,onClose }) => {
 
-  
   return (
     <div className="popup-overlay" onClick={onClose}>
       <div className="popup-content" onClick={(e) => e.stopPropagation()}>
@@ -14,9 +13,10 @@ const Popup = ({ src, description, price, allergenList,onClose }) => {
         <ul className='flex-list'>
           <li>
         { allergenList != null ? allergenList.map( allergen => ( 
+          
         <img className='allergens-pic'
-        src={require(`../img/alergenos/${allergen.imgPath}`)}
-        alt={`Imagen de ${allergen.imgPath}`}
+        src={require(`../img/alergenos/${allergen.allergen.fileName}`)}
+        alt={`Imagen de ${allergen.allergen.fileName}`}
       />
         
         )) : null}</li>

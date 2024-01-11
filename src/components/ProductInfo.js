@@ -28,7 +28,7 @@ const ProductList = () => {
 
             <div className="product-info">
               <p>{product.name}</p>
-              <div className="price-circle">
+              <div className="price-circle-menu">
                 <span>{product.price} €</span>
               </div>
             </div>
