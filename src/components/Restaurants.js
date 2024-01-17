@@ -15,7 +15,7 @@ const Restaurants = () => {
   useEffect(() => {
     const fetchRestaurants = async () => {
       try {
-        const response = await axios.get('http://localhost:8081/management/restaurant/restaurants');
+        const response = await axios.get('https://back.gumithuesca.com/management/restaurant/restaurants');
         setRestaurantsList(response.data.restaurantList);
       } catch (error) {
         console.error('Error fetching restaurantList:', error);
@@ -35,10 +35,10 @@ const Restaurants = () => {
     <div className="container">
       <ul className="list-flex">
         {restaurantList.map((restaurant) => (
-         <Link to={`/carta/${restaurant.id}`} className="admin-menu-item-first">  <li key={restaurant.id} className="product-item">
+         <Link to={`/carta/${restaurant.id}`} className="admin-menu-item-first">  <li key={restaurant.id} className="restaurant-item">
             <div className="card" style={{  marginBottom: '20px', transition: 'transform 0.3s ease-in-out' }}>
              
-              <img src={restaurant.image == null  ? logo: require(restaurant.image)} className="card-img-top" alt={`Imagen de ${restaurant.name}`} />
+              <img src={restaurant.logo == null  ? logo: restaurant.logo} className="card-img-top" alt={`Imagen de ${restaurant.name}`} />
               <div className="card-body-custom" style = {{background: '#d4aa8a' }}>
                 <h5 className="card-title" style = {{padding: '10px' , color : 'white'}}>{restaurant.name}</h5>
                 <p className="card-text" style = {{color : 'white'}}>{restaurant.description}</p>

@@ -12,31 +12,40 @@ import AdminMenu from './AdminMenuPrincipal';
 
 
 
-const RestaurantAdditionalInfo = ({takeAway , isdelivery ,whatsappOrder, whatsappNumber,instragramAccount }) => {
+const RestaurantAdditionalInfo = ({takeAway , isdelivery ,whatsappOrder, whatsappNumber,instragramAccount, address, city }) => {
 
   return (
     <div>     
 
         { takeAway  && <div className='infoBox'>
-        <p className="infoText">¡Disponible para Take Away!          
-</p>
 <img src={recoger} alt='pedir' />
+<p className="infoText">¡Disponible para Take Away!</p>      
         </div>}
         { isdelivery  && <div className='infoBox'>
-          <p className="infoText">¡Disponible para Delivery!</p>
           <img src={pedir}  alt='pedir' />
+          <p className="infoText">¡Disponible para Delivery!</p>
         </div>}
         { whatsappOrder  && <div className='infoBox'>
-          <p className="infoText">¡Disponible pedido por WhatsApp!         
-</p>
 <a href={`https://wa.me/${whatsappNumber}`} target="_blank"><img src={whatsapp}  alt='pedir' /></a>
+<p className="infoText">¡Disponible pedido por WhatsApp!</p>   
         </div>}
 
         { instragramAccount  &&  instragramAccount != null && <div className='infoBox'>
-          <p className="infoText">¡Pasate por nuestras redes!         
-</p>
 <a href={`https://www.instagram.com/${instragramAccount}`} target="_blank"><img src={insta}  alt='pedir' /></a>
-        </div>}
+<p className="infoText">¡Pasate por nuestras redes!</p>       
+</div>
+        
+        }
+<div className='infoBoxIframe'>
+        <iframe
+            width="100%"
+            height="100%"
+            frameborder="0" style={{border:0}}
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyDcCm6mBFcAVs0lp-6xboASN9IrU4HLvrY&q=${address},${city},ESPAÑA`}>
+  </iframe>
+</div>
     </div>
   );
 };

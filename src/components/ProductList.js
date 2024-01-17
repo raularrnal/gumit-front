@@ -21,14 +21,17 @@ const ProductList = ({ productList }) => {
       <ul className='list-flex'>
         {productList && productList.map(product => (
           <li key={product.id} className="product-item" onClick={() => showPopup(product)}>
-            <img src={product.image == null ? logo : product.image} className="card-img-top" alt={`Imagen de ${product.name}`} />
-
-            <div className="product-info">
-              <p>{product.name}</p>
-              <div className="price-circle">
+             
+             <img src={product.image == null  ? logo: product.image} className="card-img-top" alt={`Imagen de ${product.name}`} />
+             <div className="card-body-custom" >
+               <h5 className="card-title" style = {{padding: '10px' , color : 'white'}}>{product.name}</h5>
+               <div className="price-circle">
                 <span>{product.price} €</span>
               </div>
-            </div>
+
+             
+           </div>
+       
           </li>
         ))}
       </ul>

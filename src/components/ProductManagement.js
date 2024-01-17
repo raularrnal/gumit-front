@@ -16,7 +16,7 @@ const ProductManagement = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get('http://localhost:8081/management/category/categories');
+      const response = await axios.get('https://back.gumithuesca.com/management/category/categories');
       setCategories(response.data.categoryList);
       setError(null);
     } catch (error) {
@@ -27,7 +27,7 @@ const ProductManagement = () => {
 
   const fetchProductsForCategory = async (categoryId) => {
     try {
-      const response = await axios.get(`http://localhost:8081/management/product/products/${categoryId}`);
+      const response = await axios.get(`https://back.gumithuesca.com/management/product/products/${categoryId}`);
       setCategoryProducts((prev) => ({ ...prev, [categoryId]: response.data.productList }));
       setError(null);
     } catch (error) {
@@ -53,7 +53,7 @@ const ProductManagement = () => {
 
   const handleDeleteProduct = async (productId) => {
     try {
-      await axios.delete(`http://localhost:8081/management/product/remove/${productId}`);
+      await axios.delete(`https://back.gumithuesca.com/management/product/remove/${productId}`);
       fetchCategories(); // Recargar las categorías y productos asociados
       setEditingProductId(null);
       setError(null);
@@ -77,14 +77,14 @@ const ProductManagement = () => {
       }
 
       if (editingProductId) {
-        await axios.put(`http://localhost:8081/management/product/update`, {
+        await axios.put(`https://back.gumithuesca.com/management/product/update`, {
           id: newProduct.id,
           description: newProduct.description,
           price: newProduct.price,
           categoryId: categoryId,
         });
       } else {
-        await axios.post('http://localhost:8081/management/product/add', {
+        await axios.post('https://back.gumithuesca.com/management/product/add', {
           description: newProduct.description,
           price: newProduct.price,
           categoryId: categoryId,

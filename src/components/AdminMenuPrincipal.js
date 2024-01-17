@@ -20,7 +20,7 @@ const AdminMenuPrincipal = () => {
 
   const fetchRestaurant = async () => {
     try {
-      const response = await axios.get(`http://localhost:8081/management/restaurant/${id}`);
+      const response = await axios.get(`https://back.gumithuesca.com/management/restaurant/${id}`);
       setRestaurant(response.data);
       setIsLoading(false); // Cuando se completa la carga, establece isLoading en falso
     } catch (error) {
@@ -68,10 +68,12 @@ const AdminMenuPrincipal = () => {
             isdelivery={restaurant.isdelivery}
             whatsappOrder={restaurant.whatsappOrder}
             whatsappNumber={restaurant.whatsappNumber}
+            address={restaurant.address}
+            city={restaurant.city}
           />
         );
-      case 'menu':
-        return <CardMenuList menuList={restaurant.menuList} />;
+    //  case 'menu':
+      //  return <CardMenuList menuList={restaurant.menuList} />;
       default:
         return null;
     }
@@ -87,10 +89,6 @@ const AdminMenuPrincipal = () => {
         <li onClick={() => setOpcionSeleccionada('carta')}>
           <img src={cartaImg} className="carta-img" alt="carta" />
           <h3>Carta</h3>
-        </li>
-        <li onClick={() => setOpcionSeleccionada('menu')}>
-          <img src={menuImg} className="carta-img" alt="Menu" />
-          <h3>Menú</h3>
         </li>
         <li onClick={() => setOpcionSeleccionada('additional_info')}>
           <img src={informacionImg} className="carta-img" alt="Informacion" />
