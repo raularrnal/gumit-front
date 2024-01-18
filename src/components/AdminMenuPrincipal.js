@@ -3,10 +3,10 @@ import { useParams } from 'react-router-dom';
 import '../css/AdminMenu.css';
 import CategoryList from './CategoryList';
 import axios from 'axios';
-import cartaImg from '../img/icons8-menú-64.png';
+import cartaImg from '../img/restaurante_1.png';
 import loading from '../img/icons8-carga-de-puntos.gif';
 import menuImg from '../img/icons8-menu-board-96.png';
-import informacionImg from '../img/icons8-restaurante--48.png';
+import informacionImg from '../img/informacion.png';
 import RestaurantAdditionalInfo from './RestaurantAdditionalInfo';
 import CardMenuList from './CardMenuList';
 
@@ -80,7 +80,7 @@ const AdminMenuPrincipal = () => {
   };
 
   return (
-    <div>
+    <div className='fatherDiv'>
       <div className="title-container">
         <h3 className="banner-title">{restaurant == null ? null : restaurant.name}</h3>
       </div>
@@ -88,11 +88,9 @@ const AdminMenuPrincipal = () => {
       <ul className="menu-list">
         <li onClick={() => setOpcionSeleccionada('carta')}>
           <img src={cartaImg} className="carta-img" alt="carta" />
-          <h3>Carta</h3>
         </li>
         <li onClick={() => setOpcionSeleccionada('additional_info')}>
           <img src={informacionImg} className="carta-img" alt="Informacion" />
-          <h3>Información</h3>
         </li>
       </ul>
 

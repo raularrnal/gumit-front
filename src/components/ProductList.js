@@ -17,7 +17,7 @@ const ProductList = ({ productList }) => {
   };
 
   return (
-    <div>
+    <div className='fatherDiv'>
       <ul className='list-flex'>
         {productList && productList.map(product => (
           <li key={product.id} className="product-item" onClick={() => showPopup(product)}>

@@ -32,7 +32,7 @@ const Restaurants = () => {
   };
 
   return (
-    <div className="container">
+    <div className="fatherDiv">
       <ul className="list-flex">
         {restaurantList.map((restaurant) => (
          <Link to={`/carta/${restaurant.id}`} className="admin-menu-item-first">  <li key={restaurant.id} className="restaurant-item">

@@ -3,7 +3,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes,Link } from 'react-router-dom';
 import CategoryList from './components/CategoryList';
-import Admin from './components/Admin';
 import './css/navPrincipal.css';
 import Restaurants from './components/Restaurants';
 import gumit from './img/gumit-banner.jpeg';
@@ -25,7 +24,6 @@ const App = () => {
 </Link>       
  <Routes>
           <Route path="/carta/:id" element={< AdminMenuPrincipal />} />
-          <Route path="/admin/*" element={<Admin />} />
           <Route path="/" element={<Restaurants />} />
     
         </Routes>
