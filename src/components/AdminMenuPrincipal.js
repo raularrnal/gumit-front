@@ -4,9 +4,11 @@ import '../css/AdminMenu.css';
 import CategoryList from './CategoryList';
 import axios from 'axios';
 import cartaImg from '../img/icons8-menú-64.png';
+//import cartaImg from '../img/ICONOS GUMIT/1.png';
 import loading from '../img/icons8-carga-de-puntos.gif';
 import menuImg from '../img/icons8-menu-board-96.png';
 import informacionImg from '../img/icons8-restaurante--48.png';
+//import informacionImg from '../img/ICONOS GUMIT/2.png';
 import RestaurantAdditionalInfo from './RestaurantAdditionalInfo';
 import CardMenuList from './CardMenuList';
 
@@ -86,13 +88,11 @@ const AdminMenuPrincipal = () => {
       </div>
 
       <ul className="menu-list">
-        <li onClick={() => setOpcionSeleccionada('carta')}>
+        <li  onClick={() => setOpcionSeleccionada('carta')}>
           <img src={cartaImg} className="carta-img" alt="carta" />
-          <h3>Carta</h3>
         </li>
         <li onClick={() => setOpcionSeleccionada('additional_info')}>
           <img src={informacionImg} className="carta-img" alt="Informacion" />
-          <h3>Información</h3>
         </li>
       </ul>
 

@@ -1,0 +1,7 @@
+id;nombre;address;city;phoneNumber;logoPath;takeAway;isDelivery;whatsappOrder;instagramAccount;whatsAppNumber;facebookAccount
+1;"PIZZERIA SALVADOR";"plaza mayor";"monzon";"666888999";"https://front.gumithuesca.com/img/ejemplo1/gumitrestaurant.png";"1";"1";"1";"";689666804;""
+21;"OBEJA NEGRA";"plaza mayor";"monzon";"666888999";"https://front.gumithuesca.com/img/ejemplo1/gumitrestaurant.png";"1";"1";"1";"";6666666666;""
+80;"TARTA MUDOS";"plaza mayor";"monzon";"666888999";"https://front.gumithuesca.com/img/ejemplo1/gumitrestaurant.png";"1";"1";"1";"";6666666666;""
+
+
+

@@ -25,12 +25,32 @@ body {
   display: flex;
   flex-wrap: wrap; /* Permite que los elementos se envuelvan cuando no hay suficiente espacio */
   justify-content: space-around; /* Alinea uniformemente los elementos a lo largo de la fila */
+  
 
 
 }
 
+.checkbox-filters {
+  display: flex;
+  justify-content: start;
+  gap: 10px; /* Espacio entre los checkboxes */
+  margin-bottom: 15px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-label {
+  margin-left: 5px;
+  font-size: 14px; /* Tamaño más pequeño para las letras */
+}
+
+
 .menu-list li {
-  color: #d4aa8a;
+  border-radius: 10px;
+  color: #C19A6B;
   flex: 1; /* Hace que cada elemento de la lista ocupe un espacio igual */
   text-align: center; /* Centra el texto dentro de cada elemento de la lista */
   padding: 10px; /* Añade relleno para espaciado interno */
@@ -40,22 +60,22 @@ body {
 
 }
 .menu-list li:hover {
-  scale: 1.05;
+  scale: 1.01;
   background-color: #facaab;
-  color: rgb(245, 135, 18);
-  text-decoration: underline  ;
+  border-radius: 8px;
+  color:#C19A6B
 }
 .menu-list img {
   width: auto;
-  height: 50px;
+  height: 80px;
   margin-right: 10px;
   padding: 10px;
   align-content: top;
 }
 .category-list {
-
-  background-color:  #d4aa8a;
-
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color:  #C19A6B;
+border-radius: 8px;
   
   list-style: none;
   padding: 0;
@@ -67,7 +87,11 @@ body {
 
 }
 
+
+
+
 .category-list li {
+  border-radius: 8px;
   color: white;
   flex: 1; /* Hace que cada elemento de la lista ocupe un espacio igual */
   text-align: center; /* Centra el texto dentro de cada elemento de la lista */
@@ -213,7 +237,7 @@ body {
   align-items: center; /* Alineación horizontal centrada para los hijos */
   justify-content: center; /* Alineación vertical centrada para los hijos */
 
-  background: #d4aa8a
+  background: #C19A6B
   /* Otros estilos según sea necesario */
 }
 
@@ -234,7 +258,7 @@ body {
 .price-circle-menu {
   width: 60px;
   height: 60px;
-  background-color: #d4aa8a; /* Color azul corporativo */
+  background-color: #C19A6B; /* Color azul corporativo */
   color: white;
   border-radius: 50%;
   display: flex;
@@ -249,7 +273,7 @@ body {
 /* ... Estilos anteriores ... */
 
 h2 {
-  background-color: #d4aa8a; /* Color de fondo gris claro */
+  background-color: #C19A6B; /* Color de fondo gris claro */
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 20px;
@@ -310,40 +334,67 @@ h2 i {
 /* Estilos para la línea cuadrada alrededor del título */
 .title-container {
   text-align: center;
-  background-color: #d4aa8a;
+  background-color: #C19A6B;
 
 }
 
 .rss-container {
   width: 100%;
-  background-color: #d4aa8a;
+  background-color: #C19A6B;
 
 }
 
 
 .infoBox {
-  background-color: #d4aa8a;
+  background-color: #C19A6B;
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 10px;
   box-shadow: #b5957c;
 }
 .infoBoxIframe {
-  background-color: #d4aa8a;
-  padding: 10px;
+  background-color: #C19A6B;
   border-radius: 8px;
   margin-bottom: 10px;
   align-items: right;
   box-shadow: #b5957c;
+  
+
+
+}
+
+.content-container {
+  max-width: 80%; /* Define el ancho máximo que deseas en pantallas más grandes */
+  margin: 0 auto; /* Centra el div horizontalmente en pantallas grandes */
+  padding: 20px; /* Agrega espaciado interno para el contenido */
+  text-align: center; /* Centra el contenido del div */
+}
+
+/* Media query para ajustar el ancho máximo en dispositivos móviles y tabletas */
+@media screen and (max-width: 767px) {
+  .content-container {
+    max-width: none; /* Elimina el ancho máximo en dispositivos móviles y tabletas */
+  }
+}
+
+.infoBoxIframe iframe {
+  border-radius: 8px;
+
 }
 
 
+.infoBoxIframe:hover{
+  scale: 1.01;
+  background-color: #e2c0a6;
+  
+}
 .infoBox:hover {
 
-  scale: 1.04;
+  scale: 1.01;
   background-color: #e2c0a6;
 }
 .infoBox img {
+  width:  50px;
   display: block;
   margin: auto;
   padding-top: 10px;
